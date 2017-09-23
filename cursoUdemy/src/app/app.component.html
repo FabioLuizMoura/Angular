@@ -1,0 +1,126 @@
+
+<div class="container">
+  <h1>Personal finance</h1>
+  <h2>Your Accounts</h2>
+
+  <accounts-list [accounts]="_accounts" (delete)="removeAcc($event)" ></accounts-list>
+
+  <account-form (created)="createAcc($event)" [error]="createAccError" ></account-form>
+
+</div>
+
+
+<!--<div class="container">
+<h1>Finança pessoal</h1>
+
+<div>
+  <h2>Sua Conta</h2>
+  <div class="row" *ngIf="_accounts.length == 0">
+     <div class="alert alert-info"><strong>você não tem nenhuma conta ainda. Please faça uma</strong></div>
+  </div>
+  
+  
+  <div class="row" *ngFor="let acc of _accounts; let i = index" [ngClass]="{selected: _selected[i], otherCssClass: otherProperty}" >
+    <h3 class="title">{{acc.title}} ({{acc.id}})</h3>
+    <p>{{acc.description}}</p>
+    <p>Balance: <strong>{{acc.balance}}</strong></p>
+    <button class="btn btn-danger" (click)="removeAcc(i)">Delete</button>
+    <button class="btn btn-primary" (click)="select(i)" >{{_selected[i] ? 'Desselecionar': 'Selecionado'}}</button>
+    <br/>
+    <br/>
+  </div>
+</div>
+
+<div>
+  <div>
+    <label for="title">Titulo: </label>
+    <input id="title" type="text" name="title" #title />
+  </div>
+
+  <div>
+    <label for="desc">Description: </label>
+    <input type="text" id="desc" name="desc" #desc />
+  </div>
+
+  <div>
+    <label for="bal">Balance: </label>
+    <input type="text" id="bal" name="bal" #balance />
+  </div>
+
+  <div>
+    <button (click)="createAcc(title,desc,balance)">Create</button>
+  </div>
+
+</div>
+</div>-->
+<!--<h1>
+  Meu primeiro app com angular 2 Cli
+</h1>
+
+<div>
+  <p>
+    Hello, {{currentUser.username}}
+  </p>
+
+  <p *ngIf="!hideEmail">Your email is: <em>{{currentUser.email}}</em></p>
+  <button (click)='toggle()'>Toggle(click)</button>
+</div>
+
+<ul>
+  <li *ngFor="let user of users; let i = index">
+    ({{i+1}}) {{user.username}} - <em>{{user.email}}</em>
+  </li>
+</ul>-->
+
+<!--<div>
+  <p>Isto é alguma coisa</p>
+  <h2>Hello {{getUsername()}}</h2>
+  <p [hidden]='hideEmail'>Your email is: <em>{{currentUser.email}}</em></p>
+  <button (click)="toggle()" >Toggle(Click)</button>
+  <button (mouseleave)="toggle()">Toggle(mouseleave)</button>
+</div>
+
+<div>
+  <input type="text" #a />
+  <p>Value of input is: {{a.value}}</p>
+</div>
+
+<div>
+  <input type="text" #b (keyup)="0" />
+  <p>Value of input is: {{b.value}}</p>
+</div>
+
+<div>
+  <h3>
+    Change email:
+  </h3>
+  <input type="text" name="name" #newMail />
+  <button (click)="changeMail(newMail.value)">Change</button>
+</div>
+
+<div>
+  <h3>
+    Change email:
+  </h3>
+  <input type="text" name="name" #newMail2 (keyup)="keyPress($event)" />
+  <button (click)="changeMail(newMail2.value)">Change</button>
+</div>
+
+<div>
+  <h3>
+    Change email:
+  </h3>
+  <input type="text" #newMail3 (keyup.enter)="changeMail(newMail3.value)" />
+  <button (click)="changeMail(newMail3.value)">Change</button>
+</div>
+
+<input [disabled]="disabledInput" type="text" placeholder="Enter your text">
+
+<input [disabled]="isDisabled()" type="text" placeholder="Enter your text">
+
+<input [disabled]="isDisabled()" type="text" [value]="currentUser.username" placeholder="Enter your text">
+
+<input [class.blue-bg]="isBlueBg" type="text" placeholder="Enter your text">
+
+<input [style.background-color]="bgColor" type="text" placeholder="Enter your text">-->
+

@@ -1,0 +1,29 @@
+ <div class="row">
+    <form class="col-md-6 col-sm-9" #form>
+      <h3>Add new account</h3>
+
+        <div *ngIf="error.length > 0">
+            <div class="alert alert-danger"><strong>Creating error!</strong> {{error}}</div>
+        </div>
+
+      <div class="form-group">
+        <label for="title">Title:</label>
+        <input type="text" class="form-control" id="title" name="title" #title >
+      </div>
+
+      <div class="form-group">
+        <label for="desc">Description:</label>
+        <input type="text" class="form-control" id="desc" name="desc" #desc>
+      </div>
+
+      <div class="form-group">
+        <label for="bal">Balance:</label>
+        <input class="form-control" id="bal" type="number" name="bal" value="0" #balance>
+      </div>
+
+      <div class="form-group">
+        <button class="btn btn-success form-control" (click)="createAcc(title,desc,balance)">Create</button>
+      </div>
+
+    </form>
+  </div>
